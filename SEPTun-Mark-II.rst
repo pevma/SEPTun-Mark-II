@@ -730,7 +730,7 @@ Some nifty tools used during the research:
 
 ::
 
- nstat > /devnstat > /dev/null && sleep 1 && nstat
+ nstat > /dev/null && sleep 1 && nstat
 
 * mpstat
 
