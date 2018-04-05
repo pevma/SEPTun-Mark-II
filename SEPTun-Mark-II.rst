@@ -732,11 +732,15 @@ Some nifty tools used during the research:
 
  nstat > /dev/null && sleep 1 && nstat
 
-* mpstat
+* Use ``mpstat`` to get an overview of CPU usage and IRQ load per
+  CPU. This command will print the summary every 2 sec.
 
 ::
 
- mpstat -u -I ALL -P ALL
+ mpstat -P ALL -u -I SCPU -I SUM 2
+ 
+ # To fix mpstat colors in a white-background terminal:
+ export S_COLORS_SGR='H=31;1:I=35;22:M=34;1:N=34;1:Z=32;22'
 
 * smp_affinity_list
 
