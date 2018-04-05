@@ -644,7 +644,7 @@ Caveats
 Bugs and info
 -------------
 
-During the testing and research, there were a few bugs/optimizations discovered and patches submitted by Eric Leblond(@regiteric) regarding the Linux kernel and Peter Manev(@pevma) concerning Intel NIC. Some further patches (and testing) that helped were introduced by Jesper Brouer (@netoptimiser) as well.
+During the testing and research, there were a few bugs/optimizations discovered and patches submitted by Eric Leblond(@regiteric) regarding the Linux kernel and Peter Manev(@pevma) concerning Intel NIC. Some further patches (and testing) that helped were introduced by Jesper Brouer (@netoptimizer) as well.
 
 Bingo bug 
 ~~~~~~~~~
@@ -726,7 +726,7 @@ Tools
 
 Some nifty tools used during the research:
  
-* nstat (thanks to @netoptimiser)
+* nstat (thanks to @netoptimizer)
 
 ::
 
@@ -750,11 +750,11 @@ Some nifty tools used during the research:
 
  top -H -p `pidof suricata`
 
-* very useful NIC stats tool (thanks to @netoptimiser again)
+* very useful NIC stats tool (thanks to @netoptimizer again)
 
 *https://github.com/netoptimizer/network-testing/blob/master/bin/ethtool_stats.pl*
 
-* pidstat (thanks to @netoptimiser again)
+* pidstat (thanks to @netoptimizer again)
 
 ::
 
@@ -1726,7 +1726,7 @@ Thank you
 People and organizations without whom this guide would have not been possible:
 
 * Eric Leblond (@regiteric – Suricata AFP/XDP godlike dev doing kernel patches while chasing off cats from the keyboard) 
-* Jesper Brouer (@netoptimiser, RedHat Principal kernel engineer, XDP developer)
+* Jesper Brouer (@netoptimizer, RedHat Principal kernel engineer, XDP developer)
 * Dave Miller for AFPacket :-)
 * `IOvisor project <https://www.iovisor.org/technology/xdp)>`_
 * SuriCon 2017 !!
