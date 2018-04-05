@@ -726,7 +726,7 @@ Tools
 
 Some nifty tools used during the research:
  
-* nstat (thanks to @netoptimizer)
+* Use ``nstat`` to get a quick overview of kernel network stats (thanks to @netoptimizer)
 
 ::
 
