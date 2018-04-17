@@ -644,7 +644,7 @@ Caveats
 Bugs and info
 -------------
 
-During the testing and research, there were a few bugs/optimizations discovered and patches submitted by Eric Leblond(@regiteric) regarding the Linux kernel and Peter Manev(@pevma) concerning Intel NIC. Some further patches (and testing) that helped were introduced by Jesper Brouer (@netoptimiser) as well.
+During the testing and research, there were a few bugs/optimizations discovered and patches submitted by Eric Leblond(@regiteric) regarding the Linux kernel and Peter Manev(@pevma) concerning Intel NIC. Some further patches (and testing) that helped were introduced by Jesper Brouer (@netoptimizer) as well.
 
 Bingo bug 
 ~~~~~~~~~
@@ -726,17 +726,21 @@ Tools
 
 Some nifty tools used during the research:
  
-* nstat (thanks to @netoptimiser)
+* Use ``nstat`` to get a quick overview of kernel network stats (thanks to @netoptimizer)
 
 ::
 
- nstat > /devnstat > /dev/null && sleep 1 && nstat
+ nstat > /dev/null && sleep 1 && nstat
 
-* mpstat
+* Use ``mpstat`` to get an overview of CPU usage and IRQ load per
+  CPU. This command will print the summary every 2 sec.
 
 ::
 
- mpstat -u -I ALL -P ALL
+ mpstat -P ALL -u -I SCPU -I SUM 2
+ 
+ # To fix mpstat colors in a white-background terminal:
+ export S_COLORS_SGR='H=31;1:I=35;22:M=34;1:N=34;1:Z=32;22'
 
 * smp_affinity_list
 
@@ -750,11 +754,11 @@ Some nifty tools used during the research:
 
  top -H -p `pidof suricata`
 
-* very useful NIC stats tool (thanks to @netoptimiser again)
+* very useful NIC stats tool (thanks to @netoptimizer again)
 
 *https://github.com/netoptimizer/network-testing/blob/master/bin/ethtool_stats.pl*
 
-* pidstat (thanks to @netoptimiser again)
+* pidstat (thanks to @netoptimizer again)
 
 ::
 
@@ -1726,7 +1730,7 @@ Thank you
 People and organizations without whom this guide would have not been possible:
 
 * Eric Leblond (@regiteric – Suricata AFP/XDP godlike dev doing kernel patches while chasing off cats from the keyboard) 
-* Jesper Brouer (@netoptimiser, RedHat Principal kernel engineer, XDP developer)
+* Jesper Brouer (@netoptimizer, RedHat Principal kernel engineer, XDP developer)
 * Dave Miller for AFPacket :-)
 * `IOvisor project <https://www.iovisor.org/technology/xdp)>`_
 * SuriCon 2017 !!
